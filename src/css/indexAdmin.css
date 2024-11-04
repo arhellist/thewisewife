@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+}
+
+label {
+  text-transform: uppercase;
+  margin-top: 1vw;
+  font-size: 1vw;
+}
+li {
+  list-style: none;
+}
+
+.img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: azure;
+  background-image: linear-gradient(120deg, #ecedfd 0 50%, #5499f4 50% 100%);
+  justify-content: start;
+}
+
+.main_text {
+  font-size: 4vw;
+}
+.main_header {
+  padding: 0.2vw 0.5vw;
+  justify-content: start;
+  background-color: rgba(95, 95, 95, 0.767);
+  width: 98%;
+
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.main_header_logo {
+  width: 6vw;
+  height: 6vw;
+  background-image: url(../img/mainLogo.jpg);
+  border-radius: 50%;
+  box-shadow: 0 0 0.5vw 0.5vw rgb(255, 255, 255);
+  margin: 1vw 2vw;
+  animation: rotation 10s infinite linear;
+  -webkit-animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+}
+
+.main_header_list {
+  justify-content: start;
+}
+
+.main_header_list__item {
+  padding: 0.5vw 2vw;
+  background-color: #5499f4;
+
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  color: white;
+  font-weight: 600;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+
+  margin: 0 0.8vw;
+
+  cursor: pointer;
+}
+.main_header_list__item:hover {
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.753);
+  transform: scale(1.05) rotate(5deg);
+  -webkit-transform: scale(1.05) rotate(5deg);
+  -moz-transform: scale(1.05) rotate(5deg);
+  -ms-transform: scale(1.05) rotate(5deg);
+  -o-transform: scale(1.05) rotate(5deg);
+}
+
+.main_header_list__item_icon {
+  width: 2vw;
+  height: 2vw;
+  margin: 0.8vw;
+}
+
+.course {
+  background-image: url(../img/icon-folder-close.png);
+}
+
+.analitics {
+  background-image: url(../img/icon-folder-close.png);
+}
+
+.main_header_list__item_text {
+  text-shadow: 0 0 10px rgba(208, 255, 0, 0.486);
+  font-size: 2vw;
+}
+
+.main_contentPad {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  width: 98%;
+  height: 100%;
+  margin: 1vw 1vw;
+  border-radius: 2vw;
+  -webkit-border-radius: 2vw;
+  -moz-border-radius: 2vw;
+  -ms-border-radius: 2vw;
+  -o-border-radius: 2vw;
+  border: 1px solid rgba(165, 42, 42, 0.507);
+}
+
+.main_contentPad_nav {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 9%;
+  border-right: 1px solid black;
+  border-radius: 2vw 0 0 2vw;
+  background-color: rgb(104, 104, 104);
+  -webkit-border-radius: 2vw 0 0 2vw;
+  -moz-border-radius: 2vw 0 0 2vw;
+  -ms-border-radius: 2vw 0 0 2vw;
+  -o-border-radius: 2vw 0 0 2vw;
+}
+
+.main_contentPad_nav__item {
+  height: 5vw;
+  width: 6vw;
+  background-color: rgba(0, 0, 0, 0.527);
+  box-shadow: 0 0 3px 3px white;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.7vw;
+  border-radius: 0.5vw;
+  -webkit-border-radius: 0.5vw;
+  -moz-border-radius: 0.5vw;
+  -ms-border-radius: 0.5vw;
+  -o-border-radius: 0.5vw;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  margin: 1vw;
+  cursor: pointer;
+}
+
+.main_contentPad_nav__item:hover {
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.753);
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+.main_contentPad_nav__item_icon {
+  width: 2vw;
+  height: 2vw;
+  margin: 0.2vw;
+  cursor: pointer;
+}
+
+.viewFlow {
+  background-image: url(../img/icon-treediagram.png);
+}
+.addLesson {
+  background-image: url(../img/icon-addfolderalt.png);
+}
+.studentList {
+  background-image: url(../img/icon-list.png);
+}
+.studentAdd {
+  background-image: url(../img/icon-addfriend.png);
+}
+
+.main_contentPad_nav__item_text {
+  pointer-events: none;
+}
+
+.main_contentPad_content {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 91%;
+  border-radius: 0 2vw 2vw 0;
+  background-color: rgb(255, 255, 255);
+  -webkit-border-radius: 0 2vw 2vw 0;
+  -moz-border-radius: 0 2vw 2vw 0;
+  -ms-border-radius: 0 2vw 2vw 0;
+  -o-border-radius: 0 2vw 2vw 0;
+}
+
+.main_contentPad_content_FORM {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  box-shadow: 0 0 1vw 1vw rgba(0, 0, 0, 0.452);
+  border-radius: 3vw;
+  -webkit-border-radius: 3vw;
+  -moz-border-radius: 3vw;
+  -ms-border-radius: 3vw;
+  -o-border-radius: 3vw;
+}
+
+.main_contentPad_content_FORM_header {
+  text-align: center;
+  font-size: 1.6vw;
+  text-transform: uppercase;
+}
+
+#content_type,
+#award_type {
+  width: 90%;
+  height: 6%;
+  background-color: rgba(0, 0, 255, 0.226);
+  border-radius: 3vw;
+  -webkit-border-radius: 3vw;
+  -moz-border-radius: 3vw;
+  -ms-border-radius: 3vw;
+  -o-border-radius: 3vw;
+
+  padding: 0 2vw;
+}
+
+.file_box {
+ 
+  width: 100%;
+}
+.input_file_transition {
+  position: absolute;
+  left: -1000vw;
+}
+.input_file {
+  border: 1px solid rgba(0, 0, 0, 0.596);
+  width: 89%;
+  height: 2.5vw;
+  background-color: rgba(0, 0, 255, 0.226);
+  border-radius: 3vw;
+  cursor: pointer;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.input_file:hover {
+  background-color: rgba(25, 25, 253, 0.534);
+}
+
+.input_file_icon {
+  margin: 0.2vw 1vw;
+  background-image: url(../img/icon-addtolist.png);
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.input_file_text {
+  font-size: 1.2vw;
+}
+
+.sellForm {
+  width: 79%;
+  height: 5%;
+  background-color: rgba(0, 0, 255, 0.226);
+  border-radius: 3vw;
+  -webkit-border-radius: 3vw;
+  -moz-border-radius: 3vw;
+  -ms-border-radius: 3vw;
+  -o-border-radius: 3vw;
+
+  padding: 0 2vw;
+}
+
+#description {
+  width: 79%;
+  background-color: rgba(0, 0, 255, 0.226);
+  border-radius: 1vw;
+  -webkit-border-radius: 1vw;
+  -moz-border-radius: 1vw;
+  -ms-border-radius: 1vw;
+  -o-border-radius: 1vw;
+  padding: 1vw;
+}
+
+.form_button {
+  width: 10vw;
+  background-color: rgba(0, 0, 255, 0.226);
+  border-radius: 5vw;
+  -webkit-border-radius: 5vw;
+  -moz-border-radius: 5vw;
+  -ms-border-radius: 5vw;
+  -o-border-radius: 5vw;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.452);
+  margin: 0.5vw;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.form_button:hover {
+  background-color: rgba(25, 25, 253, 0.534);
+}
+.form_button_icon {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin: 0.6vw 0.6vw;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.452);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.cancel_button {
+  position: absolute;
+  top: 1.5vw;
+  right: 1.5vw;
+  box-shadow: 0 0 0.5vw 0.5vw rgba(25, 0, 255, 0.219);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.cancel_button:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.form_button_text {
+  margin: 0.6vw 0.6vw;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1vw;
+}
+
+.cancel_icon {
+  background-image: url(../img/icon-circledelete.png);
+}
+
+.submit_icon {
+  background-image: url(../img/icon-circleselect.png);
+}
