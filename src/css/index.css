@@ -166,7 +166,7 @@ html {
 .mainPage_wiget {
   width: 92%;
   height: 17vw;
-  margin-top: 5vw;
+  margin-top: 7vw;
   border-radius: 150vw;
   background-color: white;
   -webkit-border-radius: 150vw;
@@ -359,6 +359,8 @@ html {
 
 .mainPage_lessonWisdom {
   width: 100%;
+  position: sticky;
+  top: 15px;
 }
 
 .mainPage_lessonWisdom_header {
@@ -368,7 +370,7 @@ html {
 .mainPage_lessonWisdom_Pad {
   width: 93%;
   margin-top: 3vw;
-  height: 40vh;
+  height: 94vh;
   overflow: scroll;
   align-items: start;
 }
@@ -563,13 +565,15 @@ html {
 
 }
 
-.mainContentTextLesson-button {
+.mainContentTextLesson-button,
+.mainContentVideoLesson-button {
+  position: absolute;
+  bottom: 5vw;
   width: 90%;
   height: 10vw;
   color: white;
   background-color: #cd90ef;
   line-height: 10vw;
-  margin: 5vw 0;
 
   border-radius: 50vw;
   -webkit-border-radius: 50vw;
@@ -578,4 +582,37 @@ html {
   -o-border-radius: 50vw;
   cursor: pointer;
 }
+
+
+.progressBar{
+  position: absolute;
+  width: 30%;
+  height: 1.5vw;
+  background-color: rgba(67, 128, 168, 0.397);
+  top: 5vw;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.progressBar_line{
+  height: 100%;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  background-color: rgb(255, 255, 255);
+  width: 0;
+}
+.mainPage_VideoPad{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
 

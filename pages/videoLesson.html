@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <section class="section mainPage flex flex-column">
+      
+      <div class="progressBar">
+        <div class="progressBar_line"></div>
+      </div>
+
+      
+
+<video class="mainPage_VideoPad" loop>
+  <source src="../src/img/video.mp4" type="video/mp4">
+</video>
+      
+<script>
+
+  const video = document.querySelector('.mainPage_VideoPad');
+  let duration;
+  let progressBar = document.querySelector('.progressBar');
+  let progressBar_line = document.querySelector('.progressBar_line');
+  const widthProgressBar = getComputedStyle(progressBar)
+
+  const posPX = widthProgressBar.width.indexOf('px')
+  const width = widthProgressBar.width.slice(0,posPX)
+
+  video.addEventListener('loadedmetadata', function() {
+    duration = video.duration
+    console.log('duration: ' + duration)
+    let perc = width /duration;
+    
+
+    setInterval(()=>{
+      progressBar_line.style.width = perc * video.currentTime + `px`;
+    },50)
+
+    video.addEventListener(`click`,()=>{
+    video.classList.toggle('playing')
+    if(video.classList.contains('playing')){
+      video.play() 
+    } else {
+      video.pause()
+    }
+  }
+)
+
+
+
+});
+
+
+
+
+
+
+  
+
+
+
+</script>
+
+      <div class="mainContentVideoLesson-button">Далее</div>
+    </section>
+
+    <script type="module" src="./src/js/index.js"></script>
+  </body>
+</html>
