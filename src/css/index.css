@@ -537,15 +537,20 @@ html {
   color: var(--primary);
 }
 
-.mainContentTextLesson {
+.mainContentTextLesson,
+.mainContentIngTextLesson {
   width: 120%;
-  height: 100vh;
+  height: 100%;
   background-color: white;
   box-shadow: inset 0 15vw 15vw 0.5vw rgba(78, 78, 78, 0.158);
   padding-top: 20vw;
   text-align: justify;
 }
 
+.mainContentIngTextLesson {
+  position: relative;
+  justify-content: start;
+}
 .mainContentTextLesson-textContent {
   width: 90vw;
   height: 100%;
@@ -556,17 +561,22 @@ html {
   text-align: left;
 }
 
-.mainContentTextLesson-textContent-paragrapher{
+.mainContentTextLesson-textContent-paragrapher,
+.mainContentTextImgLesson-textContent-paragrapher {
   font-family: "Times New Roman", Times, serif;
   font-size: 5vw;
   text-align: justify;
   text-indent: 5vw;
   margin-bottom: 2vw;
+}
 
+.mainContentTextImgLesson-textContent-paragrapher{
+  font-size: 4vw;
 }
 
 .mainContentTextLesson-button,
-.mainContentVideoLesson-button {
+.mainContentVideoLesson-button,
+.mainContentImgTextLesson-button {
   position: absolute;
   bottom: 5vw;
   width: 90%;
@@ -582,13 +592,16 @@ html {
   -o-border-radius: 50vw;
   cursor: pointer;
 }
+.mainContentImgTextLesson-button {
+  position: unset;
+}
 
-
-.progressBar{
-  position: absolute;
+.progressBar {
+  position: fixed;
+  z-index: 10;
   width: 30%;
   height: 1.5vw;
-  background-color: rgba(67, 128, 168, 0.397);
+  background-color: rgba(255, 255, 255, 0.397);
   top: 5vw;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -597,7 +610,7 @@ html {
   -o-border-radius: 50px;
 }
 
-.progressBar_line{
+.progressBar_line {
   height: 100%;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -607,12 +620,41 @@ html {
   background-color: rgb(255, 255, 255);
   width: 0;
 }
-.mainPage_VideoPad{
+.mainPage_VideoPad {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
+.mainPageTextImgLesson{
+  height: 100%;
+  position: relative;
+}
+.mainPage_headImg {
+  width: 101vw;
+  height: 101vw;
 
+  background-image: url(../img/textImgLesson.png);
+}
 
+.mainContentIngTextLesson_textContent{
+  position: sticky;
+  top: 2vw;
+}
+.mainContentImgTextLesson-header {
+  font-size: 7vw;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  width: 95vw;
+  text-align: left;
+  margin: 3vw 0;
+  
+}
+
+.mainContentImgTextLesson_text{
+  width: 95vw;
+  height: 85vh;
+  overflow: scroll;
+
+}
