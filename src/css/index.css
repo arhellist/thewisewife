@@ -638,11 +638,14 @@ html {
   background-image: url(../img/textImgLesson.png);
 }
 
+
 .mainContentIngTextLesson_textContent{
+  position: relative;
+}
+
+.mainContentImgTextLesson-header {
   position: sticky;
   top: 2vw;
-}
-.mainContentImgTextLesson-header {
   font-size: 7vw;
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
